@@ -227,6 +227,8 @@ document.querySelector(".miaosha-kuang").addEventListener("transitionend",functi
 })
 
 
+
+
 //倒计时
 setInterval(function () {
     var now=new Date();
@@ -303,7 +305,7 @@ banprev1.onclick = function () {
 
 
 //商标轮播部分
-function lunbo() {
+/*function lunbo() {
     var banner=document.querySelectorAll(".pt-ft");
     var imgs=document.querySelectorAll(".pt-ft ul");
 
@@ -363,4 +365,53 @@ function lunbo() {
 
 
 }
-lunbo()
+lunbo()*/
+
+var logoinners = document.querySelectorAll(".pt-ft ul");
+var logobtnLs = document.querySelectorAll(".left-btn");
+var logobtnRs = document.querySelectorAll(".right-btn");
+
+var num3 = 0;
+
+function bannerlogo(inner, btnl, btnr, wid) {
+    function move5() {
+        num3++;
+        if(num3 == 4) {
+            num3 = 1;
+        }
+        if(num3 < 0) {
+            num3 = 2;
+        }
+        inner.style.transition = "all 1s";
+        inner.style.marginLeft = -wid * num3 + "px";
+    }
+    btnr.onclick = function() {
+        move5();
+    }
+    btnl.onclick = function() {
+        num3 -= 2;
+        move5();
+    }
+    inner.addEventListener("transitionend", function() {
+        inner.style.transition = "none";
+        if(num3 == 0) {
+            num3 = 2;
+            inner.style.marginLeft = -wid * num3 + "px";
+
+        }
+        if(num3 == 3) {
+            num3 = 1;
+            inner.style.marginLeft = -wid * num3 + "px";
+
+        }
+
+    })
+}
+for(let i = 0; i < 15; i++) {
+
+    if(i == 12 || i == 13 || i == 14) {
+        bannerlogo(logoinners[i], logobtnLs[i], logobtnRs[i], 370);
+    } else {
+        bannerlogo(logoinners[i], logobtnLs[i], logobtnRs[i], 570);
+    }
+}

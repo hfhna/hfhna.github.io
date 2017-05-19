@@ -2351,11 +2351,11 @@ header {
     overflow:hidden;
 }
 .pt-ft ul{
-    width:570px;
+    width:2280px;
     height:45px;
     position:absolute;
     left:0;
-    top:0;
+    top:10px;
 }
 
 .pt-ft ul li{
