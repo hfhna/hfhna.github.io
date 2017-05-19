@@ -32,7 +32,7 @@ $(function () {
 
 
   $('#resume').fullpage({
-      sectionsColor: ['transparent', 'transparent', '#e4e4e4', 'rgba(255, 255, 255, .0)', 'transparent', '#e44c65'],
+      sectionsColor: ['transparent', 'transparent', '#e4e4e4', 'rgba(255, 255, 255, .0)', 'transparent', 'transparent'],
 
       scrollingSpeed: 700,
       // 是否首尾相接
@@ -46,7 +46,7 @@ $(function () {
       // // 左右滑块循环
       loopHorizontal: false,
       // 左右滑块颜色
-      controlArrowColor:'#e44c65',
+      controlArrowColor:'#16BA9D',
       // 导航栏设置
       anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6'],
       menu: '#menu',
@@ -65,7 +65,6 @@ $(function () {
           $(this).attr('title', Tooltips[index])
         })
         $('[data-toggle="tooltip"]').tooltip();*/
-
 
         // 顶部导航栏自动会拉事件
         if ($('.navbar-toggle').css('display') == 'block') {
