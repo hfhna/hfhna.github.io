@@ -66,7 +66,6 @@ $(function () {
         })
         $('[data-toggle="tooltip"]').tooltip();
 
-
         // 顶部导航栏自动会拉事件
         if ($('.navbar-toggle').css('display') == 'block') {
           $('.navbar-collapse li').on('click', function () {
