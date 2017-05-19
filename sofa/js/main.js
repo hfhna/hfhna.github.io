@@ -20,12 +20,18 @@ $(".tab-content .devices li").each(function (index,ele) {
     }else{
         $(".rank-content").eq(index).css("display","none");
     }
-    $(this).hover(function () {
+    /*$(this).hover(function () {
         $(this).addClass("active").siblings().removeClass("active");
         $(".rank-content").eq(index).css("display","block");
     },function () {
 
         $(".rank-content").eq(index).css("display","none");
+    })*/
+    $(this).hover(function () {
+        $(".rank-content").css("display","none");
+        $(".rank-content").eq(index).css("display","block");
+    },function () {
+
     })
     
 })
